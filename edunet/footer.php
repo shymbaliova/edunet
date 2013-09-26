@@ -44,8 +44,21 @@
 				} ?>
 
 			<?php } ?>
-
+		
 		</footer> <!-- /.site-footer.row -->
+
+		<?php if ( of_get_option( 'footer_content', edunet_get_credits() ) ) {
+			echo '<div class="row smallprint">';
+			echo apply_filters( 'meta_content', wp_kses_post( of_get_option( 'footer_content', edunet_get_credits() ) ) );
+		
+			
+			echo '<div class="social-media-icons ">';
+			echo edunet_get_social_media();
+			echo '</div> <!-- /.social-media-icons  -->';
+			echo '</div> <!-- /.smallprint -->';
+
+		} ?>
+		
 
 	</div> <!-- /.footercontainer -->
 

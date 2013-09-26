@@ -52,7 +52,7 @@ if ( ! function_exists( 'edunet_setup' ) ) {
 
 		// This theme uses wp_nav_menu() in one location
 		register_nav_menus( array(
-				'primary' => esc_html__( 'Primary Menu', 'edunet' )
+				'primary' => esc_html__( 'Главное меню', 'edunet' )
 			) );
 
 		// This theme supports a variety of post formats
@@ -495,7 +495,7 @@ if ( ! function_exists( 'edunet_comment' ) ) {
 			// Display trackbacks differently than normal comments ?>
 			<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
 				<article id="comment-<?php comment_ID(); ?>" class="pingback">
-					<p><?php esc_html_e( 'Pingback:', 'edunet' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( esc_html__( '(Edit)', 'edunet' ), '<span class="edit-link">', '</span>' ); ?></p>
+					<p><?php esc_html_e( 'Pingback:', 'edunet' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( esc_html__( '(Редактировать)', 'edunet' ), '<span class="edit-link">', '</span>' ); ?></p>
 				</article> <!-- #comment-##.pingback -->
 			<?php
 			break;
@@ -510,7 +510,7 @@ if ( ! function_exists( 'edunet_comment' ) ) {
 						printf( '<cite class="fn">%1$s %2$s</cite>',
 							get_comment_author_link(),
 							// If current post author is also comment author, make it known visually.
-							( $comment->user_id === $post->post_author ) ? '<span> ' . esc_html__( 'Post author', 'edunet' ) . '</span>' : '' );
+							( $comment->user_id === $post->post_author ) ? '<span> ' . esc_html__( 'Автор поста', 'edunet' ) . '</span>' : '' );
 						printf( '<a href="%1$s" title="Posted %2$s"><time pubdate datetime="%3$s">%4$s</time></a>',
 							esc_url( get_comment_link( $comment->comment_ID ) ),
 							sprintf( esc_html__( '%1$s @ %2$s', 'edunet' ), esc_html( get_comment_date() ), esc_attr( get_comment_time() ) ),
@@ -527,7 +527,7 @@ if ( ! function_exists( 'edunet_comment' ) ) {
 
 					<section class="comment-content comment">
 						<?php comment_text(); ?>
-						<?php edit_comment_link( esc_html__( 'Edit', 'edunet' ), '<p class="edit-link">', '</p>' ); ?>
+						<?php edit_comment_link( esc_html__( 'Редактировать', 'edunet' ), '<p class="edit-link">', '</p>' ); ?>
 					</section> <!-- .comment-content -->
 
 					<div class="reply">
@@ -555,11 +555,11 @@ function edunet_comment_form_default_fields( $fields ) {
 	$req = get_option( 'require_name_email' );
 	$aria_req = ( $req ? " aria-required='true'" : '' );
 
-	$fields[ 'author' ] = '<p class="comment-form-author">' . '<label for="author">' . esc_html__( 'Name', 'edunet' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' . '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>';
+	$fields[ 'author' ] = '<p class="comment-form-author">' . '<label for="author">' . esc_html__( 'Имя', 'edunet' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' . '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>';
 
 	$fields[ 'email' ] =  '<p class="comment-form-email"><label for="email">' . esc_html__( 'Email', 'edunet' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' . '<input id="email" email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>';
 
-	$fields[ 'url' ] =  '<p class="comment-form-url"><label for="url">' . esc_html__( 'Website', 'edunet' ) . '</label>' . '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></p>';
+	$fields[ 'url' ] =  '<p class="comment-form-url"><label for="url">' . esc_html__( 'Сайт', 'edunet' ) . '</label>' . '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></p>';
 
 	return $fields;
 
@@ -652,7 +652,7 @@ if ( ! function_exists( 'edunet_posted_on' ) ) {
 		$comments = sprintf( '<span class="comments-link"><i class="icon-comment"></i> <a href="%1$s" title="%2$s">%3$s</a></span>',
 			esc_url( get_comments_link() ),
 			esc_attr( esc_html__( 'Comment on ' . the_title_attribute( 'echo=0' ) ) ),
-			( get_comments_number() > 0 ? sprintf( _n( '%1$s Comment', '%1$s Comments', get_comments_number() ), get_comments_number() ) : esc_html__( 'No Comments', 'edunet' ) )
+			( get_comments_number() > 0 ? sprintf( _n( '%1$s Comment', '%1$s Comments', get_comments_number() ), get_comments_number() ) : esc_html__( 'Нет комментариев', 'edunet' ) )
 		);
 
 		// Translators: 1: Date 2: Author 3: Categories 4: Comments
@@ -876,6 +876,7 @@ if ( ! function_exists( 'edunet_get_credits' ) ) {
 		$output = sprintf( '%1$s <a href="%2$s" title="%3$s">%4$s</a>',
 			esc_html__( 'Copyright', 'edunet' ),
 			esc_url( esc_html__( 'linkedin.com/shymbaliova', 'edunet' ) ),
+			esc_attr( esc_html__( 'Diana Shymbaliova', 'edunet' ) ),
 			esc_html__( 'Diana Shymbaliova', 'edunet' )
 		);
 

@@ -41,7 +41,7 @@
 					'class' => array() ) ) )
 					); ?>
 				<?php wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'edunet' ),
+					'before' => '<div class="page-links">' . esc_html__( 'Страницы:', 'edunet' ),
 					'after' => '</div>',
 					'link_before' => '<span class="page-numbers">',
 					'link_after' => '</span>'

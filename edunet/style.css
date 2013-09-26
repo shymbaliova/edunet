@@ -698,7 +698,6 @@ select {
 
 #bannercontainer {
 	width: 100%;
-	margin-top: 10px;
 }
 
 .banner {
@@ -726,11 +725,6 @@ select {
  }
 
 .banner h1 {
-	font-size: 56px;
-	font-size: 3.50rem;
-}
-
-.banner h2 {
 	font-size: 32px;
 	font-size: 2rem;
 }
@@ -788,6 +782,12 @@ select {
 	height: 34px;
 }
 
+.smallprint .social-media-icons {
+	float: none;
+	text-align: left;
+	margin-top:-1rem;
+
+}
 .social-media-icons ul {
 	list-style: none;
 	margin: .5em 0 0 0;
@@ -1549,7 +1549,9 @@ form label.error {
 	color: rgb(0,0,0);
 }
 
-.site-footer .widget-area .widget {
+.site-footer {
+	margin-top: 16px;
+	margin-top: 1rem;
 	margin-bottom: 16px;
 	margin-bottom: 1rem;
 }
@@ -1566,7 +1568,7 @@ form label.error {
 }
 
 .smallprint a { 
-	color: #555;
+	color: #939393;
 }
 
 .smallprint a:visited { 
@@ -1587,6 +1589,15 @@ form label.error {
 	padding-left: 0;
 }
 
+.widget_em_calendar{
+
+	font-size: 1.1rem;
+	
+}
+.widget_em_calendar table {
+	margin: 0 auto
+}
+
 .widget-area .widget {
 	overflow: hidden;
 	-moz-hyphens: auto;
@@ -1597,6 +1608,7 @@ form label.error {
 	word-break: break-word;
 	margin-bottom: 48px;
 	margin-bottom: 3rem;
+	text-align: center;
 }
 
 .widget select {
@@ -1680,7 +1692,9 @@ form label.error {
 	text-align: right;
 }
 
-
+.em-location-map-container {
+	margin: 0 auto
+}
 /* ==========================================================================
    Content Navigation
    ========================================================================== */
@@ -1798,8 +1812,8 @@ li span.dots {
 	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 700;
-	font-size: 18px;
-	font-size: 1.125rem;
+	font-size: 20px;
+	font-size: 1.3rem;
 	line-height: 1.5;
 }
 
