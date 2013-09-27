@@ -929,6 +929,7 @@ article.sticky {
 	margin: 0 0.1875rem 0 0;
 	display: inline;
 	text-decoration: none;
+
 }
 
 .post-categories a:visited,
@@ -1591,9 +1592,10 @@ form label.error {
 
 .widget_em_calendar{
 
-	font-size: 1.1rem;
+	font-size: 1.2rem;
 	
 }
+
 .widget_em_calendar table {
 	margin: 0 auto
 }
@@ -1694,6 +1696,19 @@ form label.error {
 
 .em-location-map-container {
 	margin: 0 auto
+}
+
+.dpe-flexible-posts > li {
+	display: inline-block;
+}
+
+.dpe-flexible-posts > img {
+
+}
+
+.widget_search {
+	margin-top: 24px;
+	margin-top: 1.4rem;
 }
 /* ==========================================================================
    Content Navigation

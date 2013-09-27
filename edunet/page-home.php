@@ -1,6 +1,6 @@
 <?php
 /**
- * Templ
+ * Template Name: Front Page Template
  *
  * @package edunet
  * @since edunet 1.0
@@ -47,7 +47,7 @@ get_header(); ?>
 
 		</div> <!-- /.col.grid_8_of_12 -->
 	
-
+	<?php get_sidebar( 'front' ); ?>
 	</div> <!-- /#primary.site-content.row -->
 
 <?php get_footer(); ?>
